@@ -1,9 +1,134 @@
-h1 {
-    background-color: black;
-    color: gold;
+:root {
+    --primary: #19A1AE;
+    --secondary: #2E3349;
+    --tertiary: #6B7082;
 }
 
-h2 {
-    background-color: darkgoldenrod;
-    color: black;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--primary);
+    position: relative;
+    margin: 0;
+}
+
+.card {
+    width: 326px;
+    height: 374px;
+    background-color: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 50px 100px -20px rgb(8 70 94 / 50%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    background-image: url("../assets/images/bg-pattern-card.svg");
+    height: 140px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.user-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 48px;
+}
+
+.user-image img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+}
+
+.user {
+    position: relative;
+    bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.card-body {
+    flex-grow: 1;
+    border-bottom: 1px solid #E8E9EC;
+    height: 148px;
+}
+
+.user-details {
+    margin-bottom: .5rem;
+}
+
+.user-details .name {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.user-details .age {
+    color: var(--tertiary);
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.user .location {
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--tertiary);
+}
+
+.footer {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    justify-content: center;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.item-title {
+    font-size: 18px;
+    color: var(--secondary);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-content {
+    font-size: 10px;
+    color: var(--tertiary);
+    font-weight: normal;
+    letter-spacing: 1.5px;
+}
+
+.top-circle, .bottom-circle {
+    position: absolute;
+}
+
+.top-circle {
+    top: 0;
+    left: 0;
+}
+
+.bottom-circle {
+    bottom: 0;
+    right: 0;
 }
